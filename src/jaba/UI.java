@@ -115,6 +115,21 @@ public class UI extends JFrame{
 				System.exit(0);
 			}
 		});
+		
+		compileButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO 自动生成的方法存根
+				if (!compileField.getText().equals("")) {
+					System.out.println("正在编译:" + compileField.getText() + "\n编译成功!!!");
+					CompilerAndRun._run(compileField.getText());
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "你没有填写这个文件名,无法编译！","错误",JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
 	}
 	
 	public static void info(String message) {
