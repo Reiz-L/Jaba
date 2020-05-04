@@ -8,7 +8,7 @@ import org.omg.CORBA.PUBLIC_MEMBER;
 /*
  * 编译现在暂时还没做
  * 下次有时间在做
- * jaba 1.0.0
+ * jaba 1.0.1
  * 
  * */
 public class main {
@@ -25,7 +25,7 @@ public class main {
 		// TODO 自动生成的方法存根
 		System.out.println("+-----------------+");
 		System.out.println("|Jaba 张浩扬与你同在|");
-		System.out.println("|当前版本:1.0.0|");
+		System.out.println("|当前版本:1.0.1|");
 		System.out.println("|输入help来获取帮助|");
 		System.out.println("+-----------------+");
 		while (true) {
