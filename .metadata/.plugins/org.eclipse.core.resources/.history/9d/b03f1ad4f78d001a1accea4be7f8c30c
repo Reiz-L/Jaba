@@ -1,0 +1,34 @@
+package jaba;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class CompilerAndRun {
+	
+	public static void _run(String path) {
+		File file = new File(path);
+		BufferedReader reader = null;
+		StringBuffer sbf = new StringBuffer();
+		try {
+			reader = new BufferedReader(new FileReader(file));
+			String tempStr;
+			while ((tempStr = reader.readLine()) != null) {
+				sbf.append(tempStr);
+				//System.out.println(sbf.toString());
+			}
+			String strCommand = sbf.toString();
+			String[] fgStrings = strCommand.split("\\r?\\n");
+			for (int i = 0; i < fgStrings.length; i++) {
+				System.out.println(fgStrings[i]);
+				
+			}
+			reader.close();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+}

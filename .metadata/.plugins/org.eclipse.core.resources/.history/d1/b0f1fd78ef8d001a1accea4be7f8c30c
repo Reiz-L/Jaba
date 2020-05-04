@@ -1,0 +1,16 @@
+package jaba;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class CompilerAndRun {
+	
+	public static void _run(String path) {
+		try {
+			FileReader fr = new FileReader(path);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+}

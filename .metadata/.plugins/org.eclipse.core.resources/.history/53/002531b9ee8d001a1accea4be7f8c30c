@@ -1,0 +1,11 @@
+package jaba;
+
+public class CompilerAndRun {
+	public static void _compile(String path) {
+		
+	}
+	
+	public static void _run(String path) {
+		
+	}
+}
