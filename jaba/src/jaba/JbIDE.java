@@ -106,6 +106,7 @@ public class JbIDE extends JFrame{
 					else if (result1 == 1) {
 						JOptionPane.showMessageDialog(null, "已经保存并退出");
 						JbIDE.this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+						pathString = null;
 						System.out.println(">>>");
 					}
 					else if (result1 == 2) {
@@ -128,6 +129,7 @@ public class JbIDE extends JFrame{
 					Object optObject[] = {"确定","保存再打开","取消"};
 					int result2 = JOptionPane.showOptionDialog(JbIDE.this, "您的文件尚未保存，是否继续打开其他文件?", "确定?", JOptionPane.YES_OPTION, JOptionPane.WARNING_MESSAGE, null, optObject, optObject[0]);
 					if (result2 == 0) {//继续打开
+						pathString = "";
 						fileDialog();
 					}else if (result2 == 1) {//保存并打开
 						SavejbFile(pathString);
@@ -180,16 +182,16 @@ public class JbIDE extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO 自动生成的方法存根
-				String strR = pathString.replaceAll("//", "\\");
+				//String strR = pathString.replaceAll("//", "\\");
 				SavejbFile(pathString);
-				System.out.println("正在运行:" + strR);
+				System.out.println("正在运行:" + pathString);
 				try {
 					Thread.sleep(1000);
 				} catch (InterruptedException e1) {
 					// TODO 自动生成的 catch 块
 					e1.printStackTrace();
 				}
-				CompilerAndRun._run(strR);
+				CompilerAndRun._run(pathString);
 			}
 		});
 		
@@ -277,6 +279,7 @@ public class JbIDE extends JFrame{
 			fw.write(str);
 			fw.close();
 			JOptionPane.showMessageDialog(null, "文件保存完成!!!");
+			pathString = dirString + fiString;
 			
 		} catch (Exception e) {
 			// TODO: handle exception
