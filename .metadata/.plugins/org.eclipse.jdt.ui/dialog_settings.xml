@@ -38,6 +38,7 @@
 		<item key="JarManifestWizardPage.MANIFEST_LOCATION" value=""/>
 		<item key="JarManifestWizardPage.SEAL_JAR" value="false"/>
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="D:\EDownload\eclipse\work\Jaba-Jvav\jaba1.0.2.jar"/>
 			<item value="D:\EDownload\eclipse\work\Jaba-Jvav\jaba1.0.0.jar"/>
 		</list>
 	</section>

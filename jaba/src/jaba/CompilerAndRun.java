@@ -23,6 +23,8 @@ public class CompilerAndRun {
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
+			System.out.println("编译运行失败了,以上是错误内容！");
+			System.out.println("如果你经过检查您的代码并没出错，那么请截图反馈给Reiz");
 		}
 	}
 }

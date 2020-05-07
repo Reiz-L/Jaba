@@ -8,8 +8,8 @@ import org.omg.CORBA.PUBLIC_MEMBER;
 /*
  * 编译现在暂时还没做
  * 下次有时间在做
- * jaba 1.0.1
- * 
+ * jaba 1.0.2
+ * 最后一次更改:2020/5/4 20:08
  * */
 public class main {
 	public static void main(String[] args) {
@@ -24,9 +24,11 @@ public class main {
 
 		// TODO 自动生成的方法存根
 		System.out.println("+-----------------+");
-		System.out.println("|Jaba 张浩扬与你同在|");
-		System.out.println("|当前版本:1.0.1|");
-		System.out.println("|输入help来获取帮助|");
+		System.out.println("|Jaba 张浩扬与你同在      ");
+		System.out.println("| jvav 和 jaba作者:张浩扬");
+		System.out.println("| jvav改造者:Reiz   ");
+		System.out.println("|当前版本:1.0.2    ");
+		System.out.println("|输入help来获取帮助    ");
 		System.out.println("+-----------------+");
 		while (true) {
 			System.out.print(">>>");
@@ -39,7 +41,7 @@ public class main {
 	
 	public static void runcomm(String str1) {
 		if (str1.equals("help")) {
-			System.out.println("jaba指令帮助:\n 输出一行字符串:print?[String|int|float]\n 打开UI:OnUI\n 信息框:info?[String|version]\n 字符串转换为二进制:ejz?[String]\n 显示版本:version\n 当前时间:time \n 运行文件:run?[文件]\n 退出:exit");
+			System.out.println("jaba指令帮助:\n 输出一行字符串:print?[字符串|整数|小数(浮数点)]\n 打开UI:OnUI\n 信息框:info?[字符串|version]\n 字符串转换为二进制:ejz?[字符串]\n 显示版本:version\n 当前时间:time \n 运行文件:run?[文件路径]\n 打开自带IDE:IDE   IDE打开文件:IDE?[文件]\n 退出:exit");
 		}
 		else if (str1.contentEquals("exit")) {
 			System.out.println("\njaba已退出!");
@@ -58,6 +60,11 @@ public class main {
 			
 			System.out.println("现在时间:" + sdf.format(new Date()));
 		}
+		else if (str1.equals("IDE")) {
+			System.out.println("正在打开Jaba IDE...");
+			JbIDE.IDEUI();
+		}
+		
 		
 		if (str1.contains("print?")) {
 			String strArr[] = str1.split("\\?");
@@ -93,6 +100,15 @@ public class main {
 			}
 			if (string1[1] == null) {
 				System.out.println("err:文件名不能为空");
+			}
+		}
+		
+		else if (str1.contains("IDE?")) {
+			String strArr[] = str1.split("\\?");
+			if (!strArr[1].equals("")) {
+				
+			}else {
+				System.out.println("错误:不能打开的文件");
 			}
 		}
 	}
