@@ -141,6 +141,17 @@ public class JbIDE extends JFrame{
 				
 			}
 		});
+		
+		//保存文件
+		jmi1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO 自动生成的方法存根
+				SavejbFile(pathString);
+				setTitle("JbIDE - " + pathString);
+			}
+		});
 		//字体设置
 		jmfi.addActionListener(new ActionListener() {
 			

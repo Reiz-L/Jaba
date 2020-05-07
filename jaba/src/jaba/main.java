@@ -68,7 +68,12 @@ public class main {
 		
 		if (str1.contains("print?")) {
 			String strArr[] = str1.split("\\?");
-			System.out.println(strArr[1]);
+			if (strArr[1].equals("[n")) {
+				System.out.println("");
+			}else {
+				System.out.println(strArr[1]);
+			}
+			
 		}
 		else if (str1.contains("ejz?")) {
 			String strArr[] = str1.split("\\?");
