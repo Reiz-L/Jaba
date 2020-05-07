@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.net.URI;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -40,7 +41,8 @@ public class UI extends JFrame{
 		this.setResizable(false);
 		BufferedImage img = null;
 		try {
-			img = ImageIO.read(new File("resources/icon.png"));
+			URL fileURL = this.getClass().getResource("/resources/icon.png");
+			img = ImageIO.read(fileURL);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -78,12 +80,13 @@ public class UI extends JFrame{
 		this.setVisible(true);
 		BufferedImage image = null;
 		try {
-			image = ImageIO.read(new File("resources/12869.png"));
+			URL fileURL1 = this.getClass().getResource("/resources/12869.png");
+			image = ImageIO.read(fileURL1);
 			System.out.println("successfully");
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			System.out.println("未找到logo图片,请确保目录下是否存在res文件夹");
+			System.out.println("未找到logo图片,请确保目录下是否存在resources文件夹");
 			JOptionPane.showMessageDialog(null, "未找到logo图片,请确保目录下是否存在res文件夹");
 			Object[] options = {"下载完整文件","取消"};
 			int _result = JOptionPane.showOptionDialog(this, "是否前往官网下载完整文件？", "是否下载", JOptionPane.YES_OPTION, JOptionPane.WARNING_MESSAGE, null, options, options[0]);

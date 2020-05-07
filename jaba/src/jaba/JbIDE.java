@@ -19,6 +19,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
@@ -56,7 +57,8 @@ public class JbIDE extends JFrame{
 		this.setTitle("*JbIDE - Untitle.jb*");
 		BufferedImage img = null;
 		try {
-			img = ImageIO.read(new File("resources/icon.png"));
+			URL fileURL = this.getClass().getResource("/resources/icon.png");
+			img = ImageIO.read(fileURL);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
