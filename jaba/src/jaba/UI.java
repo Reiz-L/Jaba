@@ -48,7 +48,7 @@ public class UI extends JFrame{
 		this.setIconImage(img);
 		jl = new JLabel("Jaba 张浩扬与您同在");
 		jl.setBounds(137, 94, 250, 25);
-		jl1 = new JLabel("当前Jaba版本:1.0.0");
+		jl1 = new JLabel("当前Jaba版本:1.0.2");
 		jl1.setBounds(137, 119, 250, 25);
 		jl2 = new JLabel("如果只想关闭窗口就请右上角关闭");
 		jl2.setBounds(137, 144, 250, 25);
@@ -169,6 +169,6 @@ public class UI extends JFrame{
 	}
 	
 	public static void ver() {
-		JOptionPane.showMessageDialog(null, "当前jaba版本:1.0.0");
+		JOptionPane.showMessageDialog(null, "当前jaba版本:1.0.2");
 	}
 }

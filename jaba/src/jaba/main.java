@@ -52,7 +52,7 @@ public class main {
 		}
 		else if (str1.equals("version")) {
 			System.out.println("第一个jaba版本:1.0.0\n编译时间:2020/5/3");
-			System.out.println("当前:1.0.1\n编译时间:2020/5/4");
+			System.out.println("当前:1.0.2\n编译时间:2020/5/7");
 		}
 		else if (str1.equals("time")) {
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-hh:mm:ss");
